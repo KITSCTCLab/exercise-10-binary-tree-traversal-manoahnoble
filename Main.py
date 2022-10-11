@@ -45,7 +45,7 @@ def preorder(root) -> None:
 
 
 def postorder(root) -> None:
-    pistorder(root.left_child)
+    postorder(root.left_child)
     postorder(root.right_child)
     print(root.data, end = " ")
 
