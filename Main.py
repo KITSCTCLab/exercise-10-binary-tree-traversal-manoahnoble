@@ -40,13 +40,13 @@ def inorder(root) -> None:
 def preorder(root) -> None:
     if root:
         print(root.data, end = " ")
-        inorder(root.left_child)
-        inorder(root.right_child)
+        preorder(root.left_child)
+        preorder(root.right_child)
 
 
 def postorder(root) -> None:
-    inorder(root.left_child)
-    inorder(root.right_child)
+    pistorder(root.left_child)
+    postorder(root.right_child)
     print(root.data, end = " ")
 
 
