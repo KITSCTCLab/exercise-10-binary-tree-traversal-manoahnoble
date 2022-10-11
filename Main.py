@@ -31,7 +31,10 @@ def insert(root, new_value) -> BinaryTreeNode:
 
 
 def inorder(root) -> None:
-    # Write your code here
+     if root:
+            inorder(root.left_child)
+            print(root.data, end = " ")
+            inorder(root.right_child)
 
 
 def preorder(root) -> None:
