@@ -16,18 +16,18 @@ def insert(root, new_value) -> BinaryTreeNode:
         root=BinaryTreeNode(new)
         return root
     else:
-        if root.data > new_value:
+        if root.data > new:
             if root.left_child is None:
-                new_node = BinaryTreeNode(new_value)
-                root.left_child = new_node
+                node = BinaryTreeNode(new)
+                root.left_child = node
             else:
-                insert(root.left_child,new_value)
+                insert(root.left_child,new)
         else:
             if root.right_child is None:
-                new_node = BinaryTreeNode(new_value)
-                root.right_child = new_node
+                node = BinaryTreeNode(new)
+                root.right_child = node
             else:
-                insert(root.right_child,new_value)
+                insert(root.right_child,new)
 
 
 def inorder(root) -> None:
